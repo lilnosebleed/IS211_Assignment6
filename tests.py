@@ -1,7 +1,7 @@
 import unittest 
 import conversions 
 
-class testcelsiusconversions(unittest.testcase):
+class testcelsiusconversions(unittest.TestCase):
 
     def test_convertcelsiustokelvin(self):
         print("\nTest convertCeliusToKelvin.")
@@ -17,8 +17,8 @@ class testcelsiusconversions(unittest.testcase):
           result = round(conversions.convertcelsiustokelvin(celsius), 2)
           self.assertEqual(results, expected_kelvin)
 
-      def test_convertcelsiustofarenheit(self):
-          print("\n Testr convertcelsiustofarenheit.")
+      def test_convertcelsiustofahrenheit(self):
+          print("\n Testr convertcelsiustofahrenheit.")
           test_cases = (
               (300.0, 572.0),
               (0.0, 32.0),
@@ -27,10 +27,10 @@ class testcelsiusconversions(unittest.testcase):
               (20.0, 68.0)
           )
           for celsius, expected_fahrenheit in test_cases:
-              print(f"Checkinf if {celsius} C == {expected_farenheit} F")
-              results = round(conversions.convertcelsiustofarenheit(celsius), 2)
-              self.assertEqual(result, expected_farenheit)
+              print(f"Checkinf if {celsius} C == {expected_fahrenheit} F")
+              results = round(conversions.convertcelsiustofahrenheit(celsius), 2)
+              self.assertEqual(result, expected_fahrenheit)
 
 
 if __name__ = '__main__':
-unittest.main()
+    unittest.main()
