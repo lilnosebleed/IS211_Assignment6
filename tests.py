@@ -85,7 +85,7 @@ class ConversionsTests(unittest.TestCase):
             (293.15, 68.0)
         ]
         for kelvin, expected_fahrenheit in test_cases:
-            print(f"Checking if {kelvin} K == {expected_farenheit} F")
+            print(f"Checking if {kelvin} K == {expected_fahrenheit} F")
             result = round(conversions.convertKelvinToFahrenheit(kelvin), 2)
             self.assertAlmostEqual(result, expected_fahrenheit)
 
